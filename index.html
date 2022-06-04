@@ -130,21 +130,6 @@
 	<div class="content list__excerpt post__content clearfix">
 		My Experience with using Hugo and deploying to Github Pages.
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/post/removing-git-submodules/" rel="bookmark">
-			
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		 Delete the relevant section in .gitmodules file [submodule &#34;public&#34;] path = public url = https://github.com/thedaxshepherd/ds-mainroad2-public.git Stage the .gitmodules changes via command line git add .gitmodules Delete the relevant sections from .git/config, which look like: [submodule &#34;public&#34;] url = https://github.com/thedaxshepherd/ds-mainroad2-public.git active = true run git rm --cached path/to/submodule git rm --cached /.git/modules/public Run rm -rf .git/modules/submodule_name rm -rf .git/modules/public Commit the change
-Delete the now untracked submodule files
-rm -rf path/to/submodule 
-	</div>
 </article>
 </main>
 
@@ -189,7 +174,6 @@ rm -rf path/to/submodule
 			<li class="widget__item"><a class="widget__link" href="/post/defining-measures-in-dax-studio/">Defining Measures in DAX Studio</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/my-first-post/">My First Post</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/website-hugo-blog-git/">Using Hugo and GitHub Pages for my blog</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/removing-git-submodules/"></a></li>
 		</ul>
 	</div>
 </div>
