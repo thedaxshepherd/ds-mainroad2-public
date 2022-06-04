@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The DAX Shepherd</title>
+    <link>https://thedaxshepherd.com/</link>
+    <description>Recent content on The DAX Shepherd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thedaxshepherd.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Defining Measures in DAX Studio</title>
+      <link>https://thedaxshepherd.com/post/defining-measures-in-dax-studio/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedaxshepherd.com/post/defining-measures-in-dax-studio/</guid>
+      <description>Some common issues that I run into when defining measures in DAX Studio.</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://thedaxshepherd.com/post/my-first-post/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedaxshepherd.com/post/my-first-post/</guid>
+      <description>Examples of syntax highlighting.</description>
+    </item>
+    
+    <item>
+      <title>Using Hugo and GitHub Pages for my blog</title>
+      <link>https://thedaxshepherd.com/post/website-hugo-blog-git/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedaxshepherd.com/post/website-hugo-blog-git/</guid>
+      <description>My Experience with using Hugo and deploying to Github Pages.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://thedaxshepherd.com/post/removing-git-submodules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedaxshepherd.com/post/removing-git-submodules/</guid>
+      <description> Delete the relevant section in .gitmodules file [submodule &amp;#34;public&amp;#34;] path = public url = https://github.com/thedaxshepherd/ds-mainroad2-public.git Stage the .gitmodules changes via command line git add .gitmodules Delete the relevant sections from .git/config, which look like: [submodule &amp;#34;public&amp;#34;] url = https://github.com/thedaxshepherd/ds-mainroad2-public.git active = true run git rm --cached path/to/submodule git rm --cached /.git/modules/public Run rm -rf .git/modules/submodule_name rm -rf .git/modules/public Commit the change
+Delete the now untracked submodule files
+rm -rf path/to/submodule </description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://thedaxshepherd.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedaxshepherd.com/about/</guid>
+      <description>My name is Jason Romans and I work on the Microsoft business intelligence stack.
+I live in Nashville, Tennessee with my wife. I grew up in Southern California in the town of Perris.
+My first computer was a Commodore 64. Since then I have been hooked on computers. I would go to the computer show at the fairgrounds to buy all the parts to build or upgrade my pc. Building my newest PC was a different experience since all I had to do was click to purchase the parts and wait for them to arrive.</description>
+    </item>
+    
+    <item>
+      <title>My Work</title>
+      <link>https://thedaxshepherd.com/mywork/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedaxshepherd.com/mywork/</guid>
+      <description>I work in a small IT shop. What this means is that I have to be self motivated to learn new skills and to apply them to projects I am working on. I had to have faith that if I built out data models using Microsoft BI that the business would see the value and benefit. A build and and they will come scenario. Lastly it means that I have to wear many hats from gathering requirements from the business to developing the best data model, to creating measures, and lastly to how the data will be presented on the canvas (whether Excel or Power BI).</description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://thedaxshepherd.com/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedaxshepherd.com/resources/</guid>
+      <description>This list is not an exhaustive list but I want to keep track of books, podcasts, and websites that I have found helpful.
+Podcasts Raw Data by P3 Adaptive As soon as I hear the familiar &amp;ldquo;Hello Friends&amp;rdquo; it makes we feel like I am among friends. Discussing topics about data and analytics emphasizing how it impacts the business
+SQL Data Partners
+Data Driven
+RunAsRadio
+Power Query Magic
+Kasper On BI</description>
+    </item>
+    
+  </channel>
+</rss>
