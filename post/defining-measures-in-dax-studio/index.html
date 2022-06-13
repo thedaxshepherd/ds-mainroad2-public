@@ -88,31 +88,35 @@
 		<div class="content post__content clearfix">
 			<p>After a period of not defining measures in DAX Studio, I seem to make the same two mistakes.</p>
 <p>The first error occurs when I try to run the following code to define a measure in a query:</p>
-<pre tabindex="0"><code class="language-dax" data-lang="dax">DEFINE MEASURE [UnitPrice] = SUM(&#39;Sales&#39;[Unit Price])
+<pre><code class="language-plaintext">DEFINE MEASURE [UnitPrice] = SUM('Sales'[Unit Price])
 	EVALUATE
 		CALCULATE([UnitPrice])
-</code></pre><p>This generates the following error: 
-<!-- raw HTML omitted -->The syntax for &lsquo;=&rsquo; is incorrect. <!-- raw HTML omitted -->.</p>
+</code></pre>
+<p>This generates the following error: 
+<span style="color:red">The syntax for &lsquo;=&rsquo; is incorrect. </span>.</p>
 <p>The issue lies in not including the table name before the measure name. This esentially indicates where the measure &ldquo;lives&rdquo; in the model and is needed for the full definition of the measure.</p>
 <p>So I am going to use the Sales table for the home of the measure. This does not impact how the measure works. I could have just as well chosen the Product table and the result would be the same. But if this were Power BI or Analysis Services where you place the measures is more about organization and making the user experience more intuitive.</p>
 <p>Here I have added the Sales table to the name of the measure.</p>
-<pre tabindex="0"><code class="language-dax" data-lang="dax">DEFINE MEASURE &#39;Sales&#39;[UnitPrice] = SUM(&#39;Sales&#39;[Unit Price])
-</code></pre><p>More info on defining a measure can be found here: <a href="https://dax.guide/st/measure/">https://dax.guide/st/measure/</a></p>
+<pre><code class="language-dax">DEFINE MEASURE 'Sales'[UnitPrice] = SUM('Sales'[Unit Price])
+</code></pre>
+<p>More info on defining a measure can be found here: <a href="https://dax.guide/st/measure/">https://dax.guide/st/measure/</a></p>
 <p>But running the full version of the code still generates an error:
-<!-- raw HTML omitted -->Query (1, 1) The expression specified in the query is not a valid table expression.<!-- raw HTML omitted --></p>
+<span style="color:red">Query (1, 1) The expression specified in the query is not a valid table expression.</span></p>
 <p>Especially when you are learning to use DAX Studio you may run into this error a lot. What it is telling us is that the code we are running is not returning a table expression. We know that when we query using DAX we usually either return a scalar or a table value. If you are not sure what functions return which you can use a site like <a href="https://dax.guide/">https://dax.guide/</a> and it will show the input as well as the return type. Calculate returns a scalar whereas CalculateTable returns a Table.</p>
 <p>One trick to turn this Scalar into a table is to use the ROW function. It takes the name of the new column and the expression for the column and returns a table with one or more columns:</p>
-<pre tabindex="0"><code class="language-dax" data-lang="dax">DEFINE MEASURE &#39;Sales&#39;[UnitPrice] = SUM(&#39;Sales&#39;[Unit Price])
+<pre><code class="language-dax">DEFINE MEASURE 'Sales'[UnitPrice] = SUM('Sales'[Unit Price])
 EVALUATE
-ROW(&#34;Unit Price&#34;, CALCULATE([UnitPrice]))
-</code></pre><p>This runs successfully</p>
+ROW(&quot;Unit Price&quot;, CALCULATE([UnitPrice]))
+</code></pre>
+<p>This runs successfully</p>
 <p><img src="/post/images/DAX_Studio_Result.png" alt="Results"></p>
 <p>With the ROW function we can give the column a name. We can also repeat this for as many columns as we need.</p>
 <p>Another option is we can use the table constructor syntax to create a table.</p>
-<pre tabindex="0"><code class="language-dax" data-lang="dax">{
+<pre><code class="language-dax">{
   (CALCULATE([UnitPrice]))
 }
-</code></pre><p>But this does not allow us to name the column. But we can add multiple rows to each column if we want.</p>
+</code></pre>
+<p>But this does not allow us to name the column. But we can add multiple rows to each column if we want.</p>
 <p>These two issues are ones that I encountered a lot when starting to use DAX Studio. Mostly due to the time period between when I would be using DAX Studio.</p>
 
 		</div>

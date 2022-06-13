@@ -89,37 +89,39 @@
 		<div class="content post__content clearfix">
 			<h2 id="code-blocks">Code Blocks</h2>
 <h4 id="powershell-example">Powershell Example</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e">## Defines three registry key paths in an array</span>
-</span></span><span style="display:flex;"><span>$tls10 = <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server&#39;</span>, <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Checks to see if all of the registry keys in the array exists</span>
-</span></span><span style="display:flex;"><span>$tls10check = ($tls10 | Test-Path) <span style="color:#f92672">-notcontains</span> $false
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## If all of the registry keys exist</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($tls10check <span style="color:#f92672">-eq</span> $True){
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">## Updates four different DWORD registry values to either 0 or 1</span>
-</span></span><span style="display:flex;"><span>	Set-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server&#39;</span> -name <span style="color:#e6db74">&#39;Enabled&#39;</span> -value <span style="color:#e6db74">&#39;0&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>	Set-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server&#39;</span> -name <span style="color:#e6db74">&#39;DisabledByDefault&#39;</span> -value <span style="color:#e6db74">&#39;1&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>	Set-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client&#39;</span> -name <span style="color:#e6db74">&#39;Enabled&#39;</span> -value <span style="color:#e6db74">&#39;0&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>	Set-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client&#39;</span> -name <span style="color:#e6db74">&#39;DisabledByDefault&#39;</span> -value <span style="color:#e6db74">&#39;1&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> { <span style="color:#75715e">## If at least one of the registry keys do not exist</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">## Creates the missing registry keys skipping the confirmation (Force)</span>
-</span></span><span style="display:flex;"><span>	New-Item <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server&#39;</span> -Force
-</span></span><span style="display:flex;"><span>	New-Item <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client&#39;</span> -Force
-</span></span><span style="display:flex;"><span>	
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">## Creates four different DWORD registry values setting the value to either 0 or 1</span>
-</span></span><span style="display:flex;"><span>	New-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server&#39;</span> -name <span style="color:#e6db74">&#39;Enabled&#39;</span> -value <span style="color:#e6db74">&#39;0&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>	New-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server&#39;</span> -name <span style="color:#e6db74">&#39;DisabledByDefault&#39;</span> -value <span style="color:#e6db74">&#39;1&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>	New-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client&#39;</span> -name <span style="color:#e6db74">&#39;Enabled&#39;</span> -value <span style="color:#e6db74">&#39;0&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>	New-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client&#39;</span> -name <span style="color:#e6db74">&#39;DisabledByDefault&#39;</span> -value <span style="color:#e6db74">&#39;1&#39;</span> -Type <span style="color:#e6db74">&#39;DWORD&#39;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="c-example">C# Example</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> names = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;() { <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#e6db74">&#34;Peter&#34;</span> };
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">string</span> name <span style="color:#66d9ef">in</span> names)
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    Console.WriteLine(name);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+<pre><code class="language-powershell">## Defines three registry key paths in an array
+$tls10 = 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server', 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client'
+
+## Checks to see if all of the registry keys in the array exists
+$tls10check = ($tls10 | Test-Path) -notcontains $false
+
+## If all of the registry keys exist
+if ($tls10check -eq $True){
+	## Updates four different DWORD registry values to either 0 or 1
+	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -name 'Enabled' -value '0' -Type 'DWORD'
+	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -name 'DisabledByDefault' -value '1' -Type 'DWORD'
+	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client' -name 'Enabled' -value '0' -Type 'DWORD'
+	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client' -name 'DisabledByDefault' -value '1' -Type 'DWORD'
+} else { ## If at least one of the registry keys do not exist
+	## Creates the missing registry keys skipping the confirmation (Force)
+	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -Force
+	New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client' -Force
+	
+	## Creates four different DWORD registry values setting the value to either 0 or 1
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -name 'Enabled' -value '0' -Type 'DWORD'
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -name 'DisabledByDefault' -value '1' -Type 'DWORD'
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client' -name 'Enabled' -value '0' -Type 'DWORD'
+	New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client' -name 'DisabledByDefault' -value '1' -Type 'DWORD'
+}
+</code></pre>
+<h3 id="c-example">C# Example</h3>
+<pre><code class="language-csharp">var names = new List&lt;string&gt;() { &quot;John&quot;, &quot;Tom&quot;, &quot;Peter&quot; };
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+</code></pre>
+
 		</div>
 		<footer class="post__footer">
 			
