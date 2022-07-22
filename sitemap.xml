@@ -3,34 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thedaxshepherd.com/categories/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-30T15:41:29-05:00</lastmod>
   </url><url>
-    <loc>https://thedaxshepherd.com/tags/dax/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+    <loc>https://thedaxshepherd.com/tags/family/</loc>
+    <lastmod>2022-06-30T15:41:29-05:00</lastmod>
   </url><url>
-    <loc>https://thedaxshepherd.com/tags/daxstudio/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+    <loc>https://thedaxshepherd.com/post/my-vacation/</loc>
+    <lastmod>2022-06-30T15:41:29-05:00</lastmod>
   </url><url>
-    <loc>https://thedaxshepherd.com/post/defining-measures-in-dax-studio/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+    <loc>https://thedaxshepherd.com/categories/personal/</loc>
+    <lastmod>2022-06-30T15:41:29-05:00</lastmod>
   </url><url>
     <loc>https://thedaxshepherd.com/post/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-30T15:41:29-05:00</lastmod>
   </url><url>
     <loc>https://thedaxshepherd.com/tags/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-30T15:41:29-05:00</lastmod>
   </url><url>
     <loc>https://thedaxshepherd.com/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thedaxshepherd.com/categories/tools/</loc>
-    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thedaxshepherd.com/categories/languages/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://thedaxshepherd.com/post/my-first-post/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-30T15:41:29-05:00</lastmod>
   </url><url>
     <loc>https://thedaxshepherd.com/tags/git/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
@@ -46,10 +37,20 @@
   </url><url>
     <loc>https://thedaxshepherd.com/about/</loc>
   </url><url>
+    <loc>https://thedaxshepherd.com/categories/career/</loc>
+  </url><url>
     <loc>https://thedaxshepherd.com/docs/</loc>
   </url><url>
-    <loc>https://thedaxshepherd.com/mywork/</loc>
+    <loc>https://thedaxshepherd.com/mywork_page/</loc>
+  </url><url>
+    <loc>https://thedaxshepherd.com/post/current-work/</loc>
   </url><url>
     <loc>https://thedaxshepherd.com/resources/</loc>
+  </url><url>
+    <loc>https://thedaxshepherd.com/tags/sql-server/</loc>
+  </url><url>
+    <loc>https://thedaxshepherd.com/tags/ssas/</loc>
+  </url><url>
+    <loc>https://thedaxshepherd.com/tags/ssis/</loc>
   </url>
 </urlset>

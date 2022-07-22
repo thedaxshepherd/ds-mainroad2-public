@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on The DAX Shepherd</title>
+    <link>https://thedaxshepherd.com/categories/personal/</link>
+    <description>Recent content in Personal on The DAX Shepherd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Jun 2022 15:41:29 -0500</lastBuildDate><atom:link href="https://thedaxshepherd.com/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Vacation</title>
+      <link>https://thedaxshepherd.com/post/my-vacation/</link>
+      <pubDate>Thu, 30 Jun 2022 15:41:29 -0500</pubDate>
+      
+      <guid>https://thedaxshepherd.com/post/my-vacation/</guid>
+      <description>Here are the pictures from my recent trip to South Dakota.
+Mount Rushmore Mount RushmoreThe BadlandsBison at Custer National Park</description>
+    </item>
+    
+  </channel>
+</rss>
